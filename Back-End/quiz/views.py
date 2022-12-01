@@ -5,6 +5,7 @@ from .serializer import *
 from rest_framework.views import APIView
 from django.http import JsonResponse
 from rest_framework.response import Response 
+import random
 
 # Create your views here.
 class Quiz(generics.ListAPIView):
@@ -20,6 +21,9 @@ class RandomQuestion(APIView):
 class QuizQuestion(APIView):
     def get(self, request, format=None, **kwargs):
         num_of_questions = 3 
-        question = Question.objects.filter(quiz__title= kwargs['topic'])[:num_of_questions]
-        serializer = QuestionSerializer(question, many=True)
+        question = list(Question.objects.filter(quiz__title= kwargs['topic']))
+        #question = random.shuffle(question)
+        random.shuffle(question)
+
+        serializer = QuestionSerializer(question[:num_of_questions], many=True)
         return Response(serializer.data)

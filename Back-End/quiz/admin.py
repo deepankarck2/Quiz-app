@@ -19,8 +19,8 @@ class AnswerInlineModel(admin.TabularInline):
 @admin.register(models.Quizzes)
 class QuizAdmin(admin.ModelAdmin):
     list_display = [
-        'id',
         'title',
+        'id',
     ]
 
 @admin.register(models.Question)
