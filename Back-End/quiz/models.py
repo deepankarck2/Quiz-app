@@ -64,3 +64,6 @@ class Answer(Updated):
     question = models.ForeignKey(Question, related_name='answer', on_delete=models.DO_NOTHING)
     answer_text = models.CharField(verbose_name = _("Answer Text"), max_length=255)
     is_right = models.BooleanField(default=False)
+
+    def __str__(self) -> str:
+        return self.answer_text
