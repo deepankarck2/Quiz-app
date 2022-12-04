@@ -5,7 +5,7 @@ function Home(){
 
     return(
         <div>
-            <Nav />
+          <Nav />  
             <h1>This is home page</h1>
             <Link to="/take">Go to take Quiz</Link>
         </div>
