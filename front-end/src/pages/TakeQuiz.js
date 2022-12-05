@@ -7,18 +7,21 @@ function TakeQuiz(){
     const [questions, setQuestions] = useState(null);
 
     useEffect(()=>{
-        console.log("Fetching...");
-        fetch(url)
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            setQuestions(data);
-            console.log(data);
-        })
-        .catch((err) => {
-           // console.log(err);
-        });
+        const fetchQuestion = () => {
+            console.log("Fetching...");
+            fetch(url)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                setQuestions(data);
+                console.log(data);
+            })
+            .catch((err) => {
+            // console.log(err);
+            });
+        }
+        fetchQuestion();
     }, []);
 
     return (
