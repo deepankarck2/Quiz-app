@@ -69,6 +69,7 @@ export default function Register(){
               setPassword(e.target.value)
             }}
             />
+            <h1>Include Special Characters, Numbers, and Letter</h1>
           </div>
 
           <div className="button-container">
