@@ -1,8 +1,7 @@
 import {useState, useEffect} from 'react'
-import Nav from '../components/Nav'
 
-function TakeQuiz(){
-    let url = 'http://localhost:8000/api/General/get_question';
+function Random(){
+    let url = 'http://localhost:8000/api/General/random_ques';
     const [questions, setQuestions] = useState(null);
 
     useEffect(()=>{
@@ -25,11 +24,10 @@ function TakeQuiz(){
 
     return (
         <div>
-            <Nav />
-              <h1> Take Quiz Page</h1>
-                {questions ? questions.map((question, index) => {
-                    return (
-                    <div  key={index}>
+              <h1> Random Question from General </h1>
+                {questions 
+                ? questions.map((question, index) => {
+                    return (<div  key={index}>
                         <h4>Question: {question.title}</h4>
                         <form>
                         {question.answer.map((ans,index) => {
@@ -50,5 +48,4 @@ function TakeQuiz(){
         </div>
     )
 }
-
-export default TakeQuiz;
+ export default Random;
