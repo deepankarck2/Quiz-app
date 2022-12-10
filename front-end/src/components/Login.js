@@ -1,11 +1,39 @@
 import React, { useState } from 'react';
-import cat from './img/cat.png';
+import cat from './img/cat_logo.png';
 import cat_logo from './img/cat_logo.png';
 import { LockClosedIcon } from '@heroicons/react/20/solid';
+import Navbar from './Navbar';
+import { useNavigate } from "react-router-dom";
+import { baseUrl } from "../pages/shared";
 
-function User(){
+export default function Login(){
+  const [username, setUsername] = useState();
+  const [password, setPassword] = useState();
+  const navigate = useNavigate();
+
+  function login(e){
+    e.preventDefault();
+    const url =  baseUrl + 'api/token/'
+    
+    fetch(url,{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body : JSON.stringify({
+        username : username,
+        password : password,
+      }),
+    }).then((response)=>{
+      return response.json()
+    }).then((data)=>{
+      console.log(data);
+      navigate("/take");
+    })
+  }
     return (
         <>
+            <Navbar />
             <div className="container mx-auto">
                 <div className='flex mx-auto'>
                     <div class="w-11/20">
@@ -25,22 +53,26 @@ function User(){
                                 Sign in to your account
                               </h2>
                             </div>
-                            <form className="mt-8 space-y-6" action="#" method="POST">
+                            <form className="mt-8 space-y-6" onSubmit={login}>
                               <input type="hidden" name="remember" defaultValue="true" />
                               <div className="-space-y-px rounded-md shadow-sm">
                                 <div>
-                                  <label htmlFor="email-address" className="sr-only">
-                                    Email address
+                                  <label htmlFor="user_name" className="sr-only">
+                                  Username
                                   </label>
+
                                   <input
-                                    id="email-address"
-                                    name="email"
-                                    type="email"
-                                    autoComplete="email"
+                                    type="text"                            
+                                    name="uname" 
+                                    id="user_name"
                                     required
+                                    value={username}
+                                    placeholder="Username"
                                     className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                                    placeholder="Email address"
-                                  />
+                                    onChange={ e => {
+                                      setUsername(e.target.value)
+                                    }}/>
+                                    
                                 </div>
                                 <div>
                                   <label htmlFor="password" className="sr-only">
@@ -54,6 +86,9 @@ function User(){
                                     required
                                     className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                     placeholder="Password"
+                                    onChange={ e => {
+                                      setPassword(e.target.value)
+                                    }}
                                   />
                                 </div>
                               </div>
@@ -91,4 +126,3 @@ function User(){
         </>
     )
 }
-export default User; 

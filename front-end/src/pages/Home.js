@@ -1,11 +1,11 @@
-import Nav from '../components/Nav'
 import {Link} from 'react-router-dom'
+import Navbar from '../components/Navbar';
 
 function Home(){
 
     return(
         <div>
-          <Nav />  
+          <Navbar />  
             <h1>This is home page</h1>
             <Link to="/take">Go to take Quiz</Link>
             <br />

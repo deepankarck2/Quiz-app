@@ -15,7 +15,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function Base() {
+function Navbar() {
   return (
     <Disclosure as="nav" className="bg-brown-darker">
       {({ open }) => (
@@ -144,4 +144,4 @@ function Base() {
     </Disclosure>
   )
 }
-export default Base;
+export default Navbar;

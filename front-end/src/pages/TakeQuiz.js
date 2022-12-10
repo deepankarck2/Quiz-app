@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import Nav from '../components/Nav'
+import Navbar from '../components/Navbar';
 
 function TakeQuiz(){
     let url = 'http://localhost:8000/api/General/get_question';
@@ -25,7 +26,7 @@ function TakeQuiz(){
 
     return (
         <div>
-            <Nav />
+            <Navbar />
               <h1> Take Quiz Page</h1>
                 {questions ? questions.map((question, index) => {
                     return (

@@ -35,7 +35,7 @@ export default function Login(){
         <div className="form">
         <form onSubmit={login}>
           <div className="input-container">
-            <label for="name">Username </label>
+            <label htmlfor="name">Username </label>
             
             <input type="text" 
             name="uname" 
@@ -48,7 +48,7 @@ export default function Login(){
 
           </div>
           <div className="input-container">
-            <label for="pass">Password </label>
+            <label htmlfor="pass">Password </label>
             <input type="password" 
             name="pass" 
             id="pass" required 
