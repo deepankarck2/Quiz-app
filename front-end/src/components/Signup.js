@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { baseUrl } from "../pages/shared";
@@ -158,7 +157,6 @@ export default function Signup() {
             </div>
           </div>
           </div>
-        <Footer />
       </>
     )
   }
