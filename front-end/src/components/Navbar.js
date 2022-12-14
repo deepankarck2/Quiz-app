@@ -3,12 +3,13 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import cat_logo from './img/cat_logo.png';
 import icon1 from './img/icon1.png';
+import QuizTopics from '../pages/QuizTopics';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
-  { name: 'Take Quiz', href: '/take', current: false },
+  { name: 'Take Quiz', href: '/quiz-topics', current: false },
   { name: 'Random Question', href: '/random', current: false },
-  /* { name: 'Item 4', href: '#', current: false }, */
+  { name: 'SignUp', href: '/signup', current: false },
 ]
 
 function classNames(...classes) {

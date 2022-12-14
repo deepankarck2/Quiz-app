@@ -9,6 +9,8 @@ import Random from './pages/RandomQuiz';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import Profile from './pages/Profile';
+import QuizTopics from './pages/QuizTopics';
+
 
 function App() {
   return (
@@ -17,7 +19,8 @@ function App() {
         <BrowserRouter>
           <Routes>
               <Route path='/' element = {<Home />} />
-              <Route path='/take' element={<TakeQuiz />}  />
+              <Route path='/quiz-topics' element = {<QuizTopics />} />
+              <Route path='/take/:topic' element={<TakeQuiz />}  />
               <Route path='/random' element={<Random />} />
               {/* <Route path='/login' element={<Login />}  /> */}
               

@@ -1,10 +1,11 @@
 import {useState, useEffect} from 'react'
 import Navbar from '../components/Navbar';
-
+import { useParams } from 'react-router-dom';
 function TakeQuiz(){
-    let url = 'http://localhost:8000/api/General/get_question';
+    let {topic} = useParams();
+    let url = 'http://localhost:8000/api/' + topic +'/get_question';
     const [questions, setQuestions] = useState(null);
-
+    
     useEffect(()=>{
         const fetchQuestion = () => {
             console.log("Fetching...");
