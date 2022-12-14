@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar'
+import React from 'react';
 
 function Random(){
     let url = 'http://localhost:8000/api/General/random_ques';

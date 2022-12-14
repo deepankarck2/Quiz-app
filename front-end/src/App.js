@@ -8,6 +8,7 @@ import Register from './pages/register';
 import Random from './pages/RandomQuiz';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path='/login' element={<Login/>}  />
               <Route path='/register' element={<Register />}  />
               <Route path='/signup' element={<Signup />}  />
+              <Route path='/profile' element={<Profile />} />
           </Routes>
         </BrowserRouter>
       </header>
