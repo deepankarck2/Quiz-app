@@ -5,7 +5,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 app_name = 'quiz'
  
 urlpatterns = [
-    path('quiz/', Quiz.as_view(), name='quiz'),
+    path('quiz_topics/', Quiz.as_view(), name='quiz'),
     path('<str:topic>/random_ques', RandomQuestion.as_view(), name='random-question'),
     path('<str:topic>/get_question', QuizQuestion.as_view(), name='quiz-question'),
 
