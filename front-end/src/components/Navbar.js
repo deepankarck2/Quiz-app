@@ -5,8 +5,8 @@ import cat_logo from './img/cat_logo.png';
 import icon1 from './img/icon1.png';
 
 const navigation = [
-  { name: 'Home', href: '/', current: false },
-  { name: 'Sign up', href: '/Signup', current: false },
+  { name: 'Item 1', href: '#', current: false },
+  { name: 'Item 2', href: '#', current: false },
   { name: 'Item 3', href: '#', current: false },
   { name: 'Item 4', href: '#', current: false },
 ]
@@ -17,7 +17,7 @@ function classNames(...classes) {
 
 function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-gray-400">
+    <Disclosure as="nav" className="bg-brown-darker">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-10xl px-2 sm:px-6 lg:px-8">

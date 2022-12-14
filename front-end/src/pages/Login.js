@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { baseUrl } from "./shared";
-import Navbar from "../components/Navbar";
+import Nav from "../components/Nav";
 
 export default function Login(){
   const [username, setUsername] = useState();
