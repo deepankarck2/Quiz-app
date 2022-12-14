@@ -5,10 +5,10 @@ import cat_logo from './img/cat_logo.png';
 import icon1 from './img/icon1.png';
 
 const navigation = [
-  { name: 'Item 1', href: '#', current: false },
-  { name: 'Item 2', href: '#', current: false },
-  { name: 'Item 3', href: '#', current: false },
-  { name: 'Item 4', href: '#', current: false },
+  { name: 'Home', href: '/', current: false },
+  { name: 'Take Quiz', href: '/take', current: false },
+  { name: 'Random Question', href: '/random', current: false },
+  /* { name: 'Item 4', href: '#', current: false }, */
 ]
 
 function classNames(...classes) {

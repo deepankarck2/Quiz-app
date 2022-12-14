@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import Navbar from '../components/Navbar';
 
 function Random(){
     let url = 'http://localhost:8000/api/General/random_ques';
@@ -24,6 +25,7 @@ function Random(){
 
     return (
         <div>
+            <Navbar></Navbar>
               <h1> Random Question from General </h1>
                 {questions 
                 ? questions.map((question, index) => {

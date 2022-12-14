@@ -17,12 +17,12 @@ function App() {
           <Routes>
               <Route path='/' element = {<Home />} />
               <Route path='/take' element={<TakeQuiz />}  />
+              <Route path='/random' element={<Random />} />
               {/* <Route path='/login' element={<Login />}  /> */}
+              
               <Route path='/login' element={<Login/>}  />
               <Route path='/register' element={<Register />}  />
               <Route path='/signup' element={<Signup />}  />
-              <Route path='/random' element={<Random />} />
-              <Route path='/nav-bar' element={<Navbar />} />
           </Routes>
         </BrowserRouter>
       </header>
