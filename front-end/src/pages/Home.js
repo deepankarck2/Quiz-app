@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom'
+import Homepages from '../components/Homepages';
 import Navbar from '../components/Navbar';
 
 function Home(){
@@ -6,10 +7,7 @@ function Home(){
     return(
         <div>
           <Navbar />  
-            <h1>This is home page</h1>
-            <Link to="/take">Go to take Quiz</Link>
-            <br />
-            <Link to="/random">Go to Random</Link>
+            <Homepages/>
         </div>
     )
 }

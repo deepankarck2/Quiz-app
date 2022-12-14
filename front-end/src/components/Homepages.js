@@ -15,14 +15,15 @@ import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Button from '@mui/material/Button';
-import homepage1 from './img/homepage1.png';
-import homepage2 from './img/homepage2.png';
+// import homepage1 from './img/homepage1.png';
+// import homepage2 from './img/homepage2.png';
 import Footer from "./Footer";
+
+import homepage1 from './img/homepage1.webp'
 
 export default function Homepages(){
     return(
         <>
-          <Navbar />  
           <div class="container mx-auto mt-10 overflow-hidden">
             <div class="flex justify-center items-center">
                 <div class="bg-white">
@@ -43,7 +44,7 @@ export default function Homepages(){
                                     />
                                     <div class="rounded-b-lg bg-gray-300">
                                         <CardActions>
-                                            <Button size="small"><Link to="/take">Are you ready to take a quiz? If you are hop in and test your skills! </Link></Button>
+                                            <Button size="small"><Link to="/quiz-topics">Are you ready to take a quiz? If you are hop in and test your skills! </Link></Button>
                                         </CardActions>
                                     </div>
                                 </Card>
@@ -58,12 +59,12 @@ export default function Homepages(){
                                 <CardMedia
                                     component="img"
                                     height="194"
-                                    image={homepage2}
+                                    image={homepage1}
                                     alt=""
                                 />
                                 <div class="rounded-b-lg bg-gray-300">
                                     <CardActions>
-                                        <Button size="small">If you are feeling nice today why not take a random quiz! Test your knowledge on various feilds.</Button>
+                                        <Button size="small"><Link to="/random">If you are feeling nice today why not take a random quiz! Test your knowledge on various feilds.</Link></Button>
                                     </CardActions>
                                 </div>
                             </Card>

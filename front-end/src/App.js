@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import Profile from './pages/Profile';
 import QuizTopics from './pages/QuizTopics';
+import Homepages from './components/Homepages';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
               <Route path='/register' element={<Register />}  />
               <Route path='/signup' element={<Signup />}  />
               <Route path='/profile' element={<Profile />} />
+              <Route path='/Homepages' element={<Homepages/>} />
           </Routes>
         </BrowserRouter>
       </header>
