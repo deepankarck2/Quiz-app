@@ -5,6 +5,7 @@ import cat_logo from './img/cat_logo.png';
 import icon1 from './img/icon1.png';
 import QuizTopics from '../pages/QuizTopics';
 import AllCards from './AllCards';
+import quizit from './img/Quiz.jpeg';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -34,14 +35,14 @@ function Navbar() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
+                  {/* <img
                     className="rounded-full h-8 w-auto lg:hidden mix-blend-multiply border border-white"
-                    src="https://i.pinimg.com/originals/9c/e5/23/9ce523a9f93bf0c1e6fffa4fcb3d1c9f.jpg"
+                    src={quizit}
                     alt="Your Company"
-                  />
+                  /> */}
                   <img
                     className="rounded-full hidden h-8 w-auto lg:block mix-blend-multiply border border-3"
-                    src="https://i.pinimg.com/originals/9c/e5/23/9ce523a9f93bf0c1e6fffa4fcb3d1c9f.jpg"
+                    src={quizit}
                     alt="Your Company"
                   />
                 </div>
