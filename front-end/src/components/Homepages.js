@@ -29,6 +29,7 @@ export default function Homepages(){
                         <div class="col-span-1 sm:col-span-1"></div>
                         <div class="col-span-4 sm:col-span-3 border rounded-lg shadow-lg">
                                 <Card class="h-full" sx={{ maxWidth: 345}} >
+                                    <Link to="/quiz-topics">
                                     <div class="text-center rounded-t-lg bg-gray-300">
                                         <CardHeader
                                             title="Take a quiz"
@@ -45,10 +46,12 @@ export default function Homepages(){
                                             <Button size="small"><Link to="/quiz-topics">Are you ready to take a quiz? If you are hop in and test your skills! </Link></Button>
                                         </CardActions>
                                     </div>
+                                    </Link>
                                 </Card>
                         </div>
                         <div class="col-span-4 sm:col-span-3 border rounded-lg shadow-lg">
                             <Card class="h-full" sx={{ maxWidth: 345 }}>
+                                <Link to="/random">
                                 <div class="text-center rounded-t-lg bg-gray-300">
                                     <CardHeader
                                         title="Take random quiz"
@@ -65,6 +68,7 @@ export default function Homepages(){
                                         <Button size="small"><Link to="/random">If you are feeling nice today why not take a random quiz! Test your knowledge on various feilds.</Link></Button>
                                     </CardActions>
                                 </div>
+                                </Link>
                             </Card>
                         </div>
                     </div>
