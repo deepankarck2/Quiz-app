@@ -100,7 +100,7 @@ function TakeQuiz(){
                                 </form>
                                 <div class="flex space-x-52 mt-4">
                                     <button type="submit" onClick={ checkAnswer } class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded mr-5"> Check Answer </button>
-                                    <button type='button' className='btn text-right' onClick={ nextQusFunc }> Next Question</button>
+                                    <button type='button' className='btn text-right bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded mr-5' onClick={ nextQusFunc }> Next Question</button>
                                 </div>
                                 <Result />
                             </div>)

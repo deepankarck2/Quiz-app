@@ -55,9 +55,8 @@ function Random(){
         if(answerCheck === true){
             return(
                 <div>
+                    <button type="button" onClick={() => window.location.reload(false)} class="mt-4 border bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border-b-4 border-green-600 hover:border-green-800 rounded">Another Question</button>
                     <h1 class="block mt-4 border border-gray-300 rounded-lg py-2 px-6 text-lg bg-green-500 text-white"> Well done you got it right! </h1>
-                    <br></br>
-                    <button onClick={() => window.location.reload(false)} class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 border-b-4 border-red-900 hover:border-red-900 rounded">Another Question</button>
                 </div>
             );
         }else if(answerCheck === false){

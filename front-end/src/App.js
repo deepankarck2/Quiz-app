@@ -4,7 +4,7 @@ import TakeQuiz from './pages/TakeQuiz';
 import Home  from './pages/Home';
 import Login from './components/Login';
 //import Login from './pages/Login';
-import Register from './pages/register';
+//import Register from './pages/register';
 import Random from './pages/RandomQuiz';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup';
@@ -27,7 +27,6 @@ function App() {
               <Route path='/take/:topic' element={<TakeQuiz />}  />
               <Route path='/random' element={<Random />} />
               <Route path='/login' element={<Login/>}  />
-              <Route path='/register' element={<Register />}  />
               <Route path='/signup' element={<Signup />}  />
               <Route path='/profile' element={<Profile />} />
               <Route path='/Homepages' element={<Homepages/>} />
