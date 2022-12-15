@@ -1,10 +1,7 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { BellIcon} from '@heroicons/react/24/outline'
 import cat_logo from './img/cat_logo.png';
-import icon1 from './img/icon1.png';
-import QuizTopics from '../pages/QuizTopics';
-import AllCards from './AllCards';
 import quizit from './img/Quiz.jpeg';
 
 const navigation = [
@@ -35,11 +32,6 @@ function Navbar() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  {/* <img
-                    className="rounded-full h-8 w-auto lg:hidden mix-blend-multiply border border-white"
-                    src={quizit}
-                    alt="Your Company"
-                  /> */}
                   <img
                     className="rounded-full hidden h-8 w-auto lg:block mix-blend-multiply border border-3"
                     src={quizit}
@@ -105,16 +97,6 @@ function Navbar() {
                           </a>
                         )}
                       </Menu.Item>
-                      {/* <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href=""
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item> */}
                       <Menu.Item>
                         {({ active }) => (
                           <a
