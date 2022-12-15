@@ -11,7 +11,7 @@ import Signup from './components/Signup';
 import Profile from './pages/Profile';
 import QuizTopics from './pages/QuizTopics';
 import Homepages from './components/Homepages';
-
+import CreateFlashCards from './components/CreateFlashCards'
 
 function App() {
   return (
@@ -30,6 +30,7 @@ function App() {
               <Route path='/signup' element={<Signup />}  />
               <Route path='/profile' element={<Profile />} />
               <Route path='/Homepages' element={<Homepages/>} />
+              <Route path='/flashcard' element={<CreateFlashCards/>} />
           </Routes>
         </BrowserRouter>
       </header>
