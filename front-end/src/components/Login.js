@@ -5,6 +5,7 @@ import { LockClosedIcon } from '@heroicons/react/20/solid';
 import Navbar from './Navbar';
 import { useNavigate } from "react-router-dom";
 import { baseUrl } from "../pages/shared";
+import Footer from './Footer';
 
 export default function Login(){
   const [username, setUsername] = useState();
@@ -36,11 +37,11 @@ export default function Login(){
             <Navbar />
             <div className="container mx-auto">
                 <div className='flex mx-auto'>
-                    <div class="w-11/20">
-                        <img class="h-screen  xl:bg-transparent" src="https://live.staticflickr.com/2643/3967606805_47a7e66509_b.jpg" alt=""/>
+                    <div class="w-3/4">
+                        <img class="xl:bg-transparent" src="https://images.pexels.com/photos/4458554/pexels-photo-4458554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
                     </div>
 
-                    <div class="w-9/20">
+                    <div class="w-1/4">
                         <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                           <div className="w-full max-w-md space-y-8">
                             <div>
@@ -122,7 +123,8 @@ export default function Login(){
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div> 
+          <Footer/> 
         </>
     )
 }
