@@ -27,7 +27,7 @@ function QuizTopics() {
     return(
         <div class="">
             <Navbar />
-            <div class="bg-amber-100 min-h-screen">
+            <div class="bg-gray-50 min-h-screen">
                 <div class="container mx-auto px-12">
                     <h1 class="text-2xl text-center	"> Quiz Topics</h1>
                     <hr class="my-8 h-px bg-black border-0 bg-black"></hr>

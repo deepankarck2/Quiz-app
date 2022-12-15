@@ -27,7 +27,7 @@ export default function Homepages(){
                 <div class="bg-white">
                     <div class="grid grid-cols-8 gap-10">
                         <div class="col-span-1 sm:col-span-1"></div>
-                        <div class="col-span-4 sm:col-span-3 border rounded-lg shadow-lg">
+                        <div class="h-[600px] w-[400px] px-4 col-span-4 sm:col-span-3">
                                 <Card class="h-full" sx={{ maxWidth: 345}} >
                                     <Link to="/quiz-topics">
                                     <div class="text-center rounded-t-lg bg-gray-300">
@@ -37,7 +37,7 @@ export default function Homepages(){
                                     </div>
                                     <CardMedia
                                         component="img"
-                                        height="194"
+                                        height=""
                                         image={homepage1}
                                         alt=""
                                     />
@@ -49,7 +49,7 @@ export default function Homepages(){
                                     </Link>
                                 </Card>
                         </div>
-                        <div class="col-span-4 sm:col-span-3 border rounded-lg shadow-lg">
+                        <div class="h-[600px] w-[400px] px-4 col-span-4 sm:col-span-3">
                             <Card class="h-full" sx={{ maxWidth: 345 }}>
                                 <Link to="/random">
                                 <div class="text-center rounded-t-lg bg-gray-300">
@@ -59,13 +59,13 @@ export default function Homepages(){
                                 </div>
                                 <CardMedia
                                     component="img"
-                                    height="194"
+                                    height=""
                                     image={homepage2}
                                     alt=""
                                 />
                                 <div class="rounded-b-lg bg-gray-300">
                                     <CardActions>
-                                        <Button size="small"><Link to="/random">If you are feeling nice today why not take a random quiz! Test your knowledge on various feilds.</Link></Button>
+                                        <Button size="small"><Link to="/random">Take a random quiz! Test your knowledge on various feilds.</Link></Button>
                                     </CardActions>
                                 </div>
                                 </Link>

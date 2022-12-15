@@ -25,7 +25,7 @@ function logout(){
 
 function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-brown-darker">
+    <Disclosure as="nav" className="bg-gray-300">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-10xl px-2 sm:px-6 lg:px-8">
