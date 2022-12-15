@@ -105,7 +105,7 @@ function TakeQuiz(){
                 : null}
                 <br></br>
                 
-              <a href='/'>Go Home</a>
+              <a href='/' className="rounded hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">Go Home</a>
         </div>
     )
 }
