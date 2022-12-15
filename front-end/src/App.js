@@ -28,11 +28,11 @@ function App() {
               <Route path='/random' element={<Random />} />
               <Route path='/login' element={<Login/>}  />
               <Route path='/signup' element={<Signup />}  />
-              <Route path='/profile' element={<Profile />} />
               <Route path='/Homepages' element={<Homepages/>} />
               <Route path='/flashcard' element={<CreateFlashCards/>} />
               <Route path='/CreateFlashCards' element={<CreateFlashCards/>}/>
               <Route path='/AllCards' element={<AllCards/>}/>
+              <Route path='/Profile' element={<Profile/>}/>
           </Routes>
         </BrowserRouter>
       </header>

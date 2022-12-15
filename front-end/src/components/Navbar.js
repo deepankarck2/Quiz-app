@@ -8,9 +8,11 @@ import AllCards from './AllCards';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
+  { name: 'Login', href: '/login', current: false },
+  { name: 'Sign up', href: '/Signup', current: false },
   { name: 'Take Quiz', href: '/quiz-topics', current: false },
   { name: 'Random Question', href: '/random', current: false },
-  { name: 'Login', href: '/login', current: false },
+  { name: 'Create flashcards', href: '/CreateFlashCards', current: false },
   { name: 'All Cards', href: '/AllCards', current: false },
 ]
 
