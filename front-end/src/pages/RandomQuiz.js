@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import Navbar from '../components/Navbar'
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function Random(){
     let url = 'http://localhost:8000/api/General/random_ques';
     const [questions, setQuestions] = useState(null);
@@ -55,13 +55,15 @@ function Random(){
         if(answerCheck === true){
             return(
                 <div>
-                    <button onClick={() => window.location.reload(false)}>Well done you got it right!</button>
+                    <h1 class="block mt-4 border border-gray-300 rounded-lg py-2 px-6 text-lg bg-green-500 text-white"> Well done you got it right! </h1>
+                    <br></br>
+                    <button onClick={() => window.location.reload(false)}>Another Question</button>
                 </div>
             );
         }else if(answerCheck === false){
             return (
                 <div>
-                    <h1> Wrong Answer. Try Again! </h1>
+                    <h1 class="block mt-4 border border-gray-300 rounded-lg py-2 px-6 text-lg bg-red-500 text-white"> Wrong Answer. Try Again! </h1>
                 </div>
             )
         } else{
@@ -70,31 +72,40 @@ function Random(){
     }
 
     return (
-        <div>
+        <div class='antialiased text-gray-700 bg-gray-100'>
             <Navbar></Navbar>
-              <h1 class="text-5xl font-normal leading-normal mt-0 mb-2 text-pink-800"> Random Question from General </h1>
+            <div class="flex w-full h-screen justify-center">
+            <div class="w-full max-w-xl p-3">
+              <h1 class="font-bold text-5xl text-center text-indigo-700"> Random Question </h1>
               <hr class="my-8 h-px bg-black border-0 bg-black"></hr>
+              <div class="bg-white p-12 rounded-lg shadow-lg w-full mt-8">
                 {questions 
                 ? questions.map((question, index) => {
                     return (<div  key={index}>
-                        <h4>Question: {question.title}</h4>
+                        <h4 class="text-2xl font-bold">Question: {question.title}</h4>
                         <form>
                         {question.answer.map((ans,index) => {
                             return(
-                                <div key={index}>
+                                <div key={index} class="block mt-4 border border-gray-300 rounded-lg py-2 px-6 text-lg">
                                     <input onChange={ handleRadioChange } id={index} type='radio' value={ans.id} name="ans_vslues"/> 
-                                    <label for="anss"> {ans.answer_text} </label>
+                                    <label for={index}> {ans.answer_text} </label>
                                 </div>
                             )
                         } )}
                         </form>
-                        <button type="submit" onClick= { checkAnswer }> Check Answer </button>
+                        <div class="flex space-x-20 mt-4">
+                                    <button type="submit" onClick={ checkAnswer } class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"> Check Answer </button>
+                        </div>
                         <Result />
                     </div>)
                 })
                 : null}
+                </div>
                 <br></br>
-              <a href='/' className="rounded hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">Go Home</a>
+              <a href='/quiz-topics' class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">More Quizes</a>
+                
+            </div>
+            </div>
         </div>
     )
 }

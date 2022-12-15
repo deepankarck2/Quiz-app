@@ -25,7 +25,7 @@ class RandomQuestion(APIView):
 
 class QuizQuestion(APIView):
     def get(self, request, format=None, **kwargs):
-        num_of_questions = 3 
+        num_of_questions = 5
         question = list(Question.objects.filter(quiz__title= kwargs['topic']))
         #question = random.shuffle(question)
         random.shuffle(question)
