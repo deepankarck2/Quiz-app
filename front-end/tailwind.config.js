@@ -1,4 +1,18 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin")
+const MyClass = plugin(function({addUtilities}){
+  addUtilities({
+    ".rotate-y-180":{
+      transform: "rotateY(180deg)"
+    },
+    ".preserve-3d":{
+      transformStyle: "perserve-3d"
+    },
+    ".backHidden":{
+      backfaceHidden: "back-hidden"
+    }
+  })
+})
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
@@ -14,6 +28,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
+    MyClass
   ],
 }
 

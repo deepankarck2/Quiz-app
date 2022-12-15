@@ -11,7 +11,9 @@ import Signup from './components/Signup';
 import Profile from './pages/Profile';
 import QuizTopics from './pages/QuizTopics';
 import Homepages from './components/Homepages';
-import CreateFlashCards from './components/CreateFlashCards'
+import CreateFlashCards from './components/CreateFlashCards';
+import AllCards from './components/AllCards';
+
 
 function App() {
   return (
@@ -19,18 +21,19 @@ function App() {
       <header className="App-header">
         <BrowserRouter>
           <Routes>
+              {/* <Route path='/login' element={<Login />}  /> */}
               <Route path='/' element = {<Home />} />
               <Route path='/quiz-topics' element = {<QuizTopics />} />
               <Route path='/take/:topic' element={<TakeQuiz />}  />
               <Route path='/random' element={<Random />} />
-              {/* <Route path='/login' element={<Login />}  /> */}
-              
               <Route path='/login' element={<Login/>}  />
               <Route path='/register' element={<Register />}  />
               <Route path='/signup' element={<Signup />}  />
               <Route path='/profile' element={<Profile />} />
               <Route path='/Homepages' element={<Homepages/>} />
               <Route path='/flashcard' element={<CreateFlashCards/>} />
+              <Route path='/CreateFlashCards' element={<CreateFlashCards/>}/>
+              <Route path='/AllCards' element={<AllCards/>}/>
           </Routes>
         </BrowserRouter>
       </header>

@@ -15,11 +15,9 @@ import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Button from '@mui/material/Button';
-// import homepage1 from './img/homepage1.png';
-// import homepage2 from './img/homepage2.png';
+import homepage1 from './img/homepage1.png';
+import homepage2 from './img/homepage2.png';
 import Footer from "./Footer";
-
-import homepage1 from './img/homepage1.webp'
 
 export default function Homepages(){
     return(
@@ -59,7 +57,7 @@ export default function Homepages(){
                                 <CardMedia
                                     component="img"
                                     height="194"
-                                    image={homepage1}
+                                    image={homepage2}
                                     alt=""
                                 />
                                 <div class="rounded-b-lg bg-gray-300">

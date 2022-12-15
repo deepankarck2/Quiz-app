@@ -1,5 +1,6 @@
 import Navbar from "./Navbar"
 import { useState } from "react";
+import {Link} from 'react-router-dom'
 
 export default function CreateFlashCards(){
     const [front, setFront] = useState();
@@ -53,6 +54,21 @@ export default function CreateFlashCards(){
                                     id="back" 
                                     rows="4" 
                                     class="block p-2.5 w-full text-sm text-gray-900 bg-gray-100 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Back of the card"></textarea>
+                                    </div>
+                            </div>
+                            
+                        </div>
+                        <div class="mt-5 ">
+                            <div class="grid grid-cols-8 gap-3">
+                                <div class="col-span-1 m:col-span-1"></div>
+                                    <div class="col-span-2 m:col-span-2 px-5 py-3 bg-gray-400 rounded shadow-lg text-white text-center align-middle"> 
+                                        <button class= "">Create</button>
+                                        {/* onClick  */}
+                                    </div>
+                                    <div class="col-span-4 sm:col-span-4 px-5 py-3 bg-gray-400 rounded shadow-lg text-white text-center align-middle">
+                                        <Link to="/AllCards" class="">
+                                            <button class=""> Show other cards </button>
+                                        </Link> 
                                     </div>
                             </div>
                         </div>
