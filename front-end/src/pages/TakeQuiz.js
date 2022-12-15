@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import Navbar from '../components/Navbar';
 import { useParams } from 'react-router-dom';
+
 function TakeQuiz(){
     let {topic} = useParams();
     let url = 'http://localhost:8000/api/' + topic +'/get_question';
@@ -104,7 +105,7 @@ function TakeQuiz(){
                 : null}
                 <br></br>
                 
-              <a href='/'>Go Home</a>
+              <a href='/' className="rounded hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">Go Home</a>
         </div>
     )
 }
