@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import Navbar from '../components/Navbar';
 import { useParams } from 'react-router-dom';
+
 function TakeQuiz(){
     let {topic} = useParams();
     let url = 'http://localhost:8000/api/' + topic +'/get_question';
