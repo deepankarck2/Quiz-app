@@ -3,7 +3,7 @@ import { useState } from "react";
 import {Link} from 'react-router-dom'
 
 export default function CreateFlashCards(){
-    const [front, setFront] = useState();
+    const [front, setFront] = useState("");
     const [back, setBack] = useState("");
 
     return(

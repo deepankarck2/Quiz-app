@@ -6,10 +6,13 @@ const MyClass = plugin(function({addUtilities}){
       transform: "rotateY(180deg)"
     },
     ".preserve-3d":{
-      transformStyle: "perserve-3d"
+      transformStyle: "preserve-3d"
     },
-    ".backHidden":{
-      backfaceHidden: "back-hidden"
+    ".backface-hidden":{
+      backfaceVisibility: "hidden"
+    },
+    "perspective":{
+      perspective: "1000px",
     }
   })
 })
@@ -22,13 +25,10 @@ module.exports = {
         'brown-darker' : '#d9d2c2',
       },
       fontFamily: {
-        'sans' : ['-apple-system']
+        'sans' : ['san-serif']
       }
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    MyClass
-  ],
+  plugins: [require('@tailwindcss/forms'), MyClass]
 }
 

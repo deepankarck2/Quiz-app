@@ -4,12 +4,14 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import cat_logo from './img/cat_logo.png';
 import icon1 from './img/icon1.png';
 import QuizTopics from '../pages/QuizTopics';
+import AllCards from './AllCards';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'Take Quiz', href: '/quiz-topics', current: false },
   { name: 'Random Question', href: '/random', current: false },
   { name: 'Login', href: '/login', current: false },
+  { name: 'All Cards', href: '/AllCards', current: false },
 ]
 
 function classNames(...classes) {
