@@ -30,17 +30,16 @@ export default function Signup() {
       }),
     }).then((response)=>{
       console.log(response);
-      if(response.status === 401){
-        alert("Please Input right info")
-        navigate('/login')
-    } else{
-      return response.json()
-    }
-    }).then((data)=>{
-      console.log(data);
+      if(response.status === 500){
+        alert("Please Input valid info. Make sure pass is 8 character long with letters and numbers")
+        navigate('/signup')
+    } else if (response.status === 201){
       navigate('/login');
+    }
     }).catch((err) => {
-
+      navigate('/signup');
+    }).then((data)=>{
+      navigate('/login');
     })
   }
     return (
