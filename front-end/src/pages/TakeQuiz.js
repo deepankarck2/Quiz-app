@@ -6,6 +6,7 @@ function TakeQuiz(){
     let url = 'http://localhost:8000/api/' + topic +'/get_question';
     const [questions, setQuestions] = useState(null);
     const [showQues, setShowQues] = useState(0);
+
     useEffect(()=>{
         const fetchQuestion = () => {
             console.log("Fetching...");
@@ -29,14 +30,15 @@ function TakeQuiz(){
         const selected_answers = selanswer;
 
         const asnwer_choices = questions[showQues].answer;
+
         let right_choice = null;
 
         asnwer_choices.map((anss) => {
             if(anss.is_right == true){
-                right_choice = anss.id
+                right_choice = anss.id;
             }
         })
-        console.log(asnwer_choices);
+
         const selected_answer = Object.keys(selected_answers)[0];
 
         setAnswerCheck( right_choice == selected_answer );
@@ -50,8 +52,8 @@ function TakeQuiz(){
 
     function nextQusFunc(e){
         setShowQues(showQues + 1);
-        setSelanswer({})
-        setAnswerCheck()
+        setSelanswer({});
+        setAnswerCheck();
     }
 
     function Result(){
@@ -68,7 +70,7 @@ function TakeQuiz(){
                 </div>
             )
         } else{
-            <></>
+            <><h1>jhg</h1></>
         }
     }
 
@@ -79,7 +81,6 @@ function TakeQuiz(){
               <hr class="my-8 h-px bg-black border-0 bg-black"></hr>
                 {questions ? questions.map((question, index) => {
                     if(index === showQues){
-                        
                         return (
                             <div  key={index}>
                                 <h4>Question: {question.title}</h4>
@@ -93,7 +94,7 @@ function TakeQuiz(){
                                     )
                                 } )}
                                 </form>
-                                <button type="submit" onClick={ checkAnswer }> Submit </button>
+                                <button type="submit" onClick={ checkAnswer }> Check Answer </button>
                                 <br></br>
                                 <button type='button' className='btn' onClick={ nextQusFunc }> Next Question</button>
                                 <Result />
@@ -102,6 +103,7 @@ function TakeQuiz(){
                 })
                 : null}
                 <br></br>
+                
               <a href='/'>Go Home</a>
         </div>
     )
