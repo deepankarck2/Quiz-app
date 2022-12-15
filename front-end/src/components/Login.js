@@ -26,16 +26,31 @@ export default function Login(){
         password : password,
       }),
     }).then((response)=>{
-      return response.json()
+      if(response.status === 401){
+          alert("Please Input right info")
+          navigate('/login')
+      } else{
+        return response.json()
+      }
     }).then((data)=>{
-      console.log(data);
-      navigate("/take");
+      localStorage.setItem('access' ,data.access)
+      localStorage.setItem('refresh' ,data.refresh)
+      console.log(localStorage.getItem('access'));
+      navigate("/quiz-topics");
+    }).catch((err) => {
+
     })
+  }
+
+  function logedin(){
+    return false;
+   
   }
     return (
         <>
             <Navbar />
-            <div className="container mx-auto">
+            {logedin ? (            
+              <div className="container mx-auto">
                 <div className='flex mx-auto'>
                     <div class="w-3/4">
                         <img class="xl:bg-transparent" src="https://images.pexels.com/photos/4458554/pexels-photo-4458554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
@@ -96,7 +111,7 @@ export default function Login(){
 
                               <div className="flex items-center justify-between">
                                 <div className="flex items-center">
-                                  <a href="#" className="font-medium text-green-500 hover:text-green-400">
+                                  <a href="/signup" className="font-medium text-green-500 hover:text-green-400">
                                   Sign up for free!
                                 </a>
                                 </div>
@@ -123,8 +138,10 @@ export default function Login(){
                         </div>
                     </div>
                 </div>
-            </div> 
-          <Footer/> 
+                <Footer/> 
+            </div> ) : (<h1 className='block mt-4 border border-gray-300 rounded-lg py-2 px-6 text-lg bg-green-500 text-white'> You are already Logged in. Please enjoy our features!</h1>) }
+
+
         </>
     )
 }

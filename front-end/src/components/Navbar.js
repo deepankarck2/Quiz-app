@@ -9,11 +9,16 @@ const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'Take Quiz', href: '/quiz-topics', current: false },
   { name: 'Random Question', href: '/random', current: false },
-  { name: 'SignUp', href: '/signup', current: false },
+  { name: 'Login', href: '/login', current: false },
 ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
+}
+
+function logout(){
+  console.log(localStorage.getItem('access'));
+  localStorage.clear();
 }
 
 function Navbar() {
@@ -110,8 +115,10 @@ function Navbar() {
                           <a
                             href="/login"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            onClick={logout}
                           >
                             Sign out
+                            
                           </a>
                         )}
                       </Menu.Item>

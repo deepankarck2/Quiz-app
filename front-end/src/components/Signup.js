@@ -29,10 +29,18 @@ export default function Signup() {
         password : password
       }),
     }).then((response)=>{
-      return response;
+      console.log(response);
+      if(response.status === 401){
+        alert("Please Input right info")
+        navigate('/login')
+    } else{
+      return response.json()
+    }
     }).then((data)=>{
       console.log(data);
       navigate('/login');
+    }).catch((err) => {
+
     })
   }
     return (
