@@ -20,4 +20,7 @@ There is a psychological phenomenon known as : Retrieval aids later retention. T
 ![image](https://user-images.githubusercontent.com/52084764/208021240-e2708108-3af9-464f-bb08-c7292b36ce32.png)
 
 ### Creating Flashcard Page
-![image](https://user-images.githubusercontent.com/52084764/208021456-7defc25b-44b0-4610-a170-847e4a32aa00.png)
+![image](https://user-images.githubusercontent.com/52084764/208022340-85ae9f8c-2e58-4168-9167-64a5ac273f9c.png)
+
+### Flash Card Gif
+![flashcard gif](https://user-images.githubusercontent.com/52084764/208022517-47f25ede-5387-4ec0-a26c-91dcc9d955ff.gif)
