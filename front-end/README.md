@@ -1,5 +1,5 @@
 # Steps to Get Project to Work
-You will need to install your own packages at your end if certain parts do not work
+You will need to install your own packages at your end if certain parts do not work.
 
 ## Installations
 npm install -D tailwindcss\
@@ -18,6 +18,10 @@ npm run start
 Host Build:\
 serve -s build\
 Network Host: http://192.168.56.1:3000 
+
+## Access to backend
+cd to backend folder\
+py .\manage.py runserver
 
 # Getting Started with Create React App
 
