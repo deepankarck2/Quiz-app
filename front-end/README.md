@@ -1,12 +1,23 @@
-# Installations for CSS
-npm install -D tailwindcss
+# Steps to Get Project to Work
+You will need to install your own packages at your end if certain parts do not work
+
+## Installations
+npm install -D tailwindcss\
 npx tailwindcss init
 
-npm install -D tailwindcss postcss autoprefixer
+npm install -D tailwindcss postcss autoprefixer\
 npx tailwindcss init
 
-npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/material @emotion/react @emotion/styled\
 npm install @mui/icons-material
+
+## How to Launch Hosted App or Local
+Local:\
+npm run start
+
+Host Build:\
+serve -s build\
+Network Host: http://192.168.56.1:3000 
 
 # Getting Started with Create React App
 
