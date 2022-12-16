@@ -1,3 +1,13 @@
+# Installations for CSS
+npm install -D tailwindcss
+npx tailwindcss init
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

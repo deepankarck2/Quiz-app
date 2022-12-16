@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e529152e.css",
+    "main.js": "/static/js/main.0d23a4f4.js",
+    "static/media/homepage2.png": "/static/media/homepage2.75191f4818d8a1fab50c.png",
+    "static/media/homepage1.png": "/static/media/homepage1.5b1a9bd5f10c31287002.png",
+    "static/media/Quiz.jpeg": "/static/media/Quiz.22740749424afc72ab47.jpeg",
+    "static/media/cat_logo.png": "/static/media/cat_logo.9e2c806404a1b395a16f.png",
+    "index.html": "/index.html",
+    "main.e529152e.css.map": "/static/css/main.e529152e.css.map",
+    "main.0d23a4f4.js.map": "/static/js/main.0d23a4f4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e529152e.css",
+    "static/js/main.0d23a4f4.js"
+  ]
+}
